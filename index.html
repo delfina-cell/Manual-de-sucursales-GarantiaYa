@@ -8,7 +8,9 @@
 *{box-sizing:border-box}body{margin:0;background:var(--c);color:var(--t);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 header{background:var(--b);color:#fff;text-align:center;padding:28px 16px 22px;border-bottom:6px solid var(--r)}
 header b{display:inline-block;background:var(--r);padding:2px 12px;border-radius:6px;font-size:1.3rem;letter-spacing:.5px}
-header h1{margin:10px 0 4px;font-size:clamp(1.4rem,4vw,2rem)}header p{margin:0;opacity:.85}
+header .logo{display:inline-block;background:#fff;border-radius:16px;padding:6px 22px;box-shadow:0 2px 8px rgba(0,0,0,.18)}
+header .logo img{display:block;height:84px;width:auto;max-width:100%}
+header h1{margin:12px 0 4px;font-size:clamp(1.4rem,4vw,2rem)}header p{margin:0;opacity:.85}
 main{max-width:860px;margin:22px auto;padding:0 14px;counter-reset:n}
 .tab{background:var(--w);border:2px solid var(--c2);border-radius:12px;margin-bottom:10px;overflow:hidden;counter-increment:n}
 .tab.open{border-color:var(--b)}
@@ -30,7 +32,7 @@ ol,ul{padding-left:1.3em;margin:6px 0}li{margin:5px 0}
 .ex{background:var(--c);border:1px dashed var(--r);padding:8px 12px;border-radius:8px;margin:8px 0}
 a{color:var(--b)}footer{text-align:center;color:#6b6250;font-size:.85rem;padding:10px 0 30px}
 </style></head><body>
-<header><b>GARANTÍA YA</b><h1>Manual paso a paso para equipos de sucursales</h1><p>Tocá una solapa para desplegarla y elegí la sección que necesitás</p></header>
+<header><span class="logo"><img src="logo.png" alt="Garantía Ya" onerror="this.parentNode.outerHTML='<b>GARANTÍA YA</b>'"></span><h1>Manual paso a paso para equipos de sucursales</h1><p>Tocá una solapa para desplegarla y elegí la sección que necesitás</p></header>
 <main>
 
 <section class="tab"><button class="th">Apertura</button><div class="tb">
@@ -63,7 +65,7 @@ a{color:var(--b)}footer{text-align:center;color:#6b6250;font-size:.85rem;padding
 <li>Copiá el legajo del calendario y pegalo en el CRM. Preguntale al cliente si viene por el nombre que figura en el calendario.</li>
 <li>Con su confirmación, tomá la factura ya impresa, leele los datos (sobre todo la dirección) y pedile que la firme.</li>
 <li>En el trato abierto del CRM, andá a <b>Roles de contacto</b>: chequeá el DNI del solicitante y si tiene co-garante (si tiene, decile el nombre para que lo confirme).</li>
-<li>Revisá si va por inmobiliaria y si ya tiene fecha de firma.</li>
+<li>Revisá si va por <b>inmobiliaria o dueño directo</b> y si ya tiene fecha de firma.</li>
 <li>Explicale cómo sigue: <ul><li><b>Con co-garante:</b> un día antes de la firma con la inmobiliaria les llegan los links de firma digital; deben firmar el solicitante y los co-garantes.</li><li><b>Solo solicitantes:</b> no firman nada más; la documentación llega directo a la inmobiliaria.</li></ul></li>
 <li>Recibí el dinero, contalo y, si está todo bien, preguntale dónde conoció Garantía Ya y cómo le fue con su asesor.</li>
 <li>Cuando el cliente se va, volvé a revisar el dinero y pasá la caja de <b>borrador a ejecutado</b>.</li></ol></div></div></section>
@@ -116,18 +118,19 @@ a{color:var(--b)}footer{text-align:center;color:#6b6250;font-size:.85rem;padding
 </div></section>
 
 <section class="tab"><button class="th">Cómo creamos una caja</button><div class="tb">
-<p>Se crean y ejecutan cuando acreditás un pago (nuevo o restante) o hacés un traspaso entre cajas, siempre desde el <b>módulo Cajas del CRM</b>. Pueden prepararse antes (estado <b>borrador</b>) y, al cobrar, solo pasás a <b>ejecutado</b>.</p>
-<div class="sub" data-t="Caja por venta nueva o restante"><h3>Caja por venta nueva o restante</h3><ol>
+<div class="sub" data-t="Caja por venta nueva o restante"><h3>Caja por venta nueva o restante</h3>
+<p>Se crean y ejecutan cuando acreditás un pago (nuevo o restante), siempre desde el <b>módulo Cajas del CRM</b>. Pueden prepararse antes (estado <b>borrador</b>) y, al cobrar, solo pasás a <b>ejecutado</b>.</p><ol>
 <li>En el CRM, entrá al módulo Cajas y clic en <b>Crear caja</b>.</li>
 <li>En <b>Tipo de transacción</b> elegí venta nueva o restante; completá la sucursal.</li>
 <li>En <b>Garantía</b> pegá el legajo, esperá que aparezca y seleccionalo: se completan solos los campos.</li>
 <li>Ingresá a mano el monto del calendario y guardá.</li></ol>
 <div class="n"><b>Atención:</b> queda en borrador hasta que recibas el pago y cambies el estado a ejecutado.</div></div>
 <div class="sub" data-t="Caja por traspaso de dinero"><h3>Caja por traspaso de dinero</h3>
-<p>Entre caja chica, caja fuerte y caja fuerte USD.</p><ol>
+<p>Entre caja chica, caja fuerte y caja fuerte USD. Se hacen desde el <b>módulo Cajas del CRM</b>.</p>
+<div class="n i"><b>Importante:</b> los traspasos <b>no se dejan en borrador</b>: se crean y se ejecutan en el momento.</div><ol>
 <li>En el módulo Cajas, clic en <b>Crear caja</b>.</li>
 <li>En transacción elegí <b>Traspaso de cuenta</b> y completá: <b>Caja origen</b> (de dónde sale) y <b>Caja destino</b> (a dónde va). Los montos siempre redondeados.</li>
-<li>Ingresá el monto y pasá de borrador a <b>ejecutado</b> para que impacte en el sistema.</li></ol>
+<li>Ingresá el monto y <b>ejecutalo en el momento</b> para que impacte en el sistema.</li></ol>
 <div class="n i"><b>Atención:</b> verificá que impactó: en Books, menú <b>BANCA</b>, revisá las cajas y actualizá la página por si el sistema tarda.</div></div>
 </div></section>
 
@@ -136,7 +139,8 @@ a{color:var(--b)}footer{text-align:center;color:#6b6250;font-size:.85rem;padding
 <li>Entrá al trato en el CRM y editalo.</li>
 <li>Bajá a <b>Pagos notificados</b>.</li>
 <li>Poné la fecha del día y el monto en transferencia.</li>
-<li>Elegí si fue <b>GS</b> (Garantía Segura) o <b>SyS</b> (Seguro y Simple).</li></ol></div>
+<li>Elegí si fue <b>GS</b> (Garantía Segura) o <b>SyS</b> (Seguro y Simple).</li>
+<li>No te olvides de <b>adjuntar el comprobante de la transferencia</b> también en <b>Pagos notificados</b>.</li></ol></div>
 <div class="sub" data-t="Pago por restante"><h3>Pago por restante</h3><ol>
 <li>Copiá el legajo, abrí Books y andá a <b>Facturas</b>.</li>
 <li>Entrá a la factura impaga.</li>
@@ -188,9 +192,10 @@ a{color:var(--b)}footer{text-align:center;color:#6b6250;font-size:.85rem;padding
 <li>Pasá el dinero necesario de caja fuerte a caja chica.</li>
 <li>Ordená las comisiones como aparecen en el CRM.</li>
 <li>En cada sobre poné el monto redondeado (más de 500 hacia arriba, menos hacia abajo), el nombre del legajo y el monto real a entregar.</li>
-<li>Editá en el CRM el redondeo, la fecha y el resto de los campos, y guardá.</li>
+<li>Editá cada comisión en el CRM <b>respetando este orden</b>: primero seleccioná la <b>caja</b> correspondiente de donde salen las comisiones, luego el <b>redondeo</b>, luego el <b>monto</b> y por último la <b>fecha de pago administración</b>. Guardá.</li>
 <li>Sobre blanco dentro del marrón, pegá el QR y abrochá.</li>
 <li>Al terminar, hacé el arqueo y corroborá las cajas.</li></ol>
+<div class="n i"><b>Importante:</b> antes de completar cualquier otro campo, seleccioná siempre la caja de donde están saliendo las comisiones. Respetá el paso a paso: caja, redondeo, monto y fecha de pago administración.</div>
 <div class="n i"><b>Atención:</b> ninguna comisión se entrega hasta que las cajas estén cuadradas. Podés cerrar los sobres antes o después del arqueo; el CRM se usa igual.</div>
 <div class="n"><b>Entrega:</b> cuando llega el cadete, que escanee el QR o firme un recibo con la cantidad de comisiones, la fecha y quién las entregó.</div></div></div></section>
 
@@ -206,15 +211,15 @@ a{color:var(--b)}footer{text-align:center;color:#6b6250;font-size:.85rem;padding
 <li>En Books, abrí la caja fuerte en dólares.</li>
 <li>Botón naranja <b>Agregar una transacción</b> → <b>Devolución de ventas</b>.</li>
 <li>Completá: cuenta de ingresos <b>ventas</b>; importe: monto a pagar; pago mediante <b>efectivo</b>; N.º de referencia (mayúsculas) <b>REEMBOLSO + LEGAJO</b>.</li></ol></div>
-<div class="sub" data-t="Acreditación en pesos"><h3>Acreditar un reembolso en pesos</h3>
-<p>Es el mismo procedimiento que en dólares, pero desde la <b>caja de pesos</b>.</p></div>
+<div class="sub" data-t="Acreditación en pesos"><h3>Acreditar un reembolso PARCIAL en pesos</h3>
+<p>Se hace tal cual los dólares, pero desde la <b>caja chica en pesos</b>.</p></div>
 </div></section>
 
 <section class="tab"><button class="th">Dólares</button><div class="tb">
 <div class="sub" data-t="Reglas generales"><h3>Reglas generales</h3>
 <p>El cliente puede pagar en pesos o en dólares. Hay dos situaciones: garantía en pesos que el cliente decide abonar en USD, o garantía en dólares (se abona en USD).</p>
 <ul><li><b>Garantía en pesos, paga en USD:</b> se toma el dólar blue <b>compra</b>. En un reembolso se devuelve en <b>pesos</b>.</li>
-<li><b>Garantía en dólares, paga en pesos:</b> se toma el dólar blue <b>venta</b>. Si paga en USD y hay reembolso, se devuelve en <b>dólares</b>.</li>
+<li><b>Garantía en dólares, paga en pesos:</b> se toma el dólar blue <b>venta</b>. Si paga en USD y hay reembolso, se devuelve en <b>dólares</b>. También se le puede devolver en <b>pesos</b>, tomando el dólar blue <b>venta</b> del momento.</li>
 <li>Consultá el valor en <a href="https://bluelytics.com.ar/#!/" target="_blank" rel="noopener">bluelytics.com.ar</a>.</li></ul>
 <div class="n i"><b>Atención:</b> en el sistema el dinero siempre impacta en <b>PESOS</b>.</div></div>
 
@@ -235,6 +240,12 @@ a{color:var(--b)}footer{text-align:center;color:#6b6250;font-size:.85rem;padding
 <li>Si paga una parte por transferencia, calculá ese monto multiplicando por la tasa (las transferencias son solo en pesos) y adjuntalo en el CRM.</li>
 <li>Con la caja acreditada, comprá los dólares en Books:
 <ol type="a"><li>Generá la caja por el monto total en pesos.</li><li>Caja chica de la sucursal → <b>Agregar transacción</b> → <b>Transferir a otra cuenta</b>.</li><li>Formulario: siempre <b>GARANTÍA YA</b>, traspaso a <b>CAJA USD</b>; referencia: lo que hiciste + legajo.</li><li>En Caja USD repetí y pasalo a <b>CAJA FUERTE USD</b>.</li></ol></li></ol></div>
+
+<div class="sub" data-t="Cambio de divisas"><h3>Cuando el cliente abona dólares de más: cambio de divisas</h3>
+<p>Si el cliente paga con más dólares de los que vale la garantía, le damos el cambio <b>en pesos</b>. Por ejemplo: si la garantía es de 545 USD y paga con 550 USD, tenemos que darle 5 USD de cambio en pesos. Esto se considera <b>CAMBIO DE DIVISAS</b>.</p>
+<div class="n"><b>Atención:</b> la tasa que se toma depende de si la garantía es en USD o en pesos (revisá las reglas generales).</div><ol>
+<li>Desde Books, entrá en la caja donde ingresamos la venta.</li>
+<li>Hacé <b>2 transacciones</b>: una por el <b>monto de la garantía</b> y otra por el <b>cambio de divisas</b>.</li></ol></div>
 </div></section>
 
 <section class="tab"><button class="th">Requisitos para clientes que quieren una garantía</button><div class="tb">
